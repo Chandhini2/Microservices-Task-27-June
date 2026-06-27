@@ -709,9 +709,6 @@ The final architecture provides a scalable and isolated microservices deployment
 
 
 ### Folder Structure
-
-# Folder Structure
-
 ```
 Microservices-Task-27-June/
 
