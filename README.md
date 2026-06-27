@@ -709,21 +709,26 @@ The final architecture provides a scalable and isolated microservices deployment
 
 
 ### Folder Structure
+
+# Folder Structure
+
+```
 Microservices-Task-27-June/
 
 ├── user-service/
-│ └── Dockerfile
+│   └── Dockerfile
 │
 ├── product-service/
-│ └── Dockerfile
+│   └── Dockerfile
 │
 ├── order-service/
-│ └── Dockerfile
+│   └── Dockerfile
 │
 ├── gateway-service/
-│ └── Dockerfile
+│   └── Dockerfile
 │
 ├── docker-compose.yml
 │
 └── README.md
+```
 
