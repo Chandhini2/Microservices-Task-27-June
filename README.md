@@ -708,14 +708,22 @@ The final architecture provides a scalable and isolated microservices deployment
 
 
 
-### Folder Explanation & Structure
+### Folder Structure
+Microservices-Task-27-June/
 
-| Folder/File | Description |
-|---|---|
-| `user-service/` | Contains User microservice source code and Dockerfile |
-| `product-service/` | Contains Product microservice source code and Dockerfile |
-| `order-service/` | Contains Order microservice source code and Dockerfile |
-| `gateway-service/` | Contains Gateway service source code and Dockerfile |
-| `docker-compose.yml` | Defines and manages all containers, ports, and network configuration |
-| `README.md` | Project documentation, setup instructions, testing steps, and troubleshooting details |
+├── user-service/
+│ └── Dockerfile
+│
+├── product-service/
+│ └── Dockerfile
+│
+├── order-service/
+│ └── Dockerfile
+│
+├── gateway-service/
+│ └── Dockerfile
+│
+├── docker-compose.yml
+│
+└── README.md
 
