@@ -1,4 +1,4 @@
-# Microservices Deployment on Kubernetes using Minikube
+<img width="940" height="458" alt="image" src="https://github.com/user-attachments/assets/4c02b6a1-e10c-414b-90d4-8fd2d069ffc6" /># Microservices Deployment on Kubernetes using Minikube
 
 ## Project Overview
 
@@ -64,6 +64,9 @@ kubectl version
 minikube version
 ```
 
+<img width="1694" height="439" alt="image" src="https://github.com/user-attachments/assets/582ee2a5-ef0c-434b-acde-74dc02d5604c" />
+
+
 ---
 
 # Minikube Setup
@@ -79,6 +82,11 @@ Verify cluster status:
 ```bash
 minikube status
 ```
+
+<img width="940" height="256" alt="image" src="https://github.com/user-attachments/assets/e2ada74f-540b-43ea-9fcf-2b5cab8873d3" />
+
+
+
 
 Check Kubernetes node:
 
@@ -115,6 +123,9 @@ Verify images:
 docker images
 ```
 
+<img width="940" height="295" alt="image" src="https://github.com/user-attachments/assets/8ad10b1d-3bf6-4fbb-9e1a-e20feebf218b" />
+
+
 Load images into Minikube:
 
 ```bash
@@ -133,6 +144,12 @@ Verify images inside Minikube:
 minikube image ls
 ```
 
+<img width="1755" height="535" alt="image" src="https://github.com/user-attachments/assets/f527225d-7f62-42b7-b9bb-e1cbbbdf73f5" />
+
+
+<img width="940" height="478" alt="image" src="https://github.com/user-attachments/assets/66a70446-3d2b-4d5d-860d-d237b747ed46" />
+
+
 ---
 
 # Kubernetes Deployment
@@ -145,11 +162,30 @@ Apply Deployment manifests:
 kubectl apply -f deployments/
 ```
 
+<img width="940" height="75" alt="image" src="https://github.com/user-attachments/assets/8581caf8-7109-40ee-88be-370f09ed2794" />
+
+<img width="940" height="230" alt="image" src="https://github.com/user-attachments/assets/a1cd986f-1b6a-4a36-945e-ffe3eeefc66b" />
+
+
+<img width="940" height="190" alt="image" src="https://github.com/user-attachments/assets/32167bed-33f1-4ce3-8799-d8b245cb1af1" />
+
+
+<img width="940" height="253" alt="image" src="https://github.com/user-attachments/assets/b20621dc-8079-4242-a647-47cea752065a" />
+
+
+
 Apply Service manifests:
 
 ```bash
 kubectl apply -f services/
 ```
+
+<img width="940" height="183" alt="image" src="https://github.com/user-attachments/assets/160b1ba9-c146-4f78-b0ef-8bf1cae58e08" />
+
+
+
+<img width="940" height="400" alt="image" src="https://github.com/user-attachments/assets/5b2232fe-7e0e-416b-b36d-29384a94c368" />
+
 
 ---
 
@@ -160,6 +196,9 @@ Check deployments:
 ```bash
 kubectl get deployments
 ```
+
+<img width="940" height="253" alt="image" src="https://github.com/user-attachments/assets/43038b6e-57db-4141-b1d4-d34712b17782" />
+
 
 Expected:
 
@@ -241,6 +280,10 @@ curl http://order-service:3002
 
 Successful responses confirm internal Kubernetes service discovery.
 
+
+<img width="940" height="493" alt="image" src="https://github.com/user-attachments/assets/e76cc575-7d04-4090-b2c3-7b4621662673" />
+
+
 ---
 
 # Access Gateway Service
@@ -265,6 +308,11 @@ curl http://localhost:3003
 
 ---
 
+
+<img width="1736" height="716" alt="image" src="https://github.com/user-attachments/assets/1d5e81ce-6cb2-4903-baf9-3fef8a213879" />
+
+
+
 # Viewing Logs
 
 View Gateway logs:
@@ -279,6 +327,9 @@ View individual pod logs:
 kubectl logs <pod-name>
 ```
 
+<img width="940" height="143" alt="image" src="https://github.com/user-attachments/assets/00479ab6-3f46-4004-bb35-1cfb213cffe6" />
+
+
 ---
 
 # Troubleshooting
@@ -288,6 +339,11 @@ kubectl logs <pod-name>
 ```bash
 kubectl describe pod <pod-name>
 ```
+<img width="1888" height="557" alt="image" src="https://github.com/user-attachments/assets/1920549c-797b-4de9-9276-84f99fc43a6b" />
+
+
+
+<img width="1520" height="826" alt="image" src="https://github.com/user-attachments/assets/1d6a966b-fe6d-422d-8232-c95689fb0b1a" />
 
 ---
 
@@ -296,6 +352,7 @@ kubectl describe pod <pod-name>
 ```bash
 kubectl logs <pod-name>
 ```
+<img width="1835" height="136" alt="image" src="https://github.com/user-attachments/assets/21593b72-1337-40aa-9729-0d6f7635099e" />
 
 ---
 
@@ -318,6 +375,9 @@ Ensure Deployment contains:
 ```yaml
 imagePullPolicy: Never
 ```
+
+<img width="955" height="470" alt="image" src="https://github.com/user-attachments/assets/a9f9cc54-a87d-4fd7-969b-435caaea1f48" />
+
 
 when using local images.
 
@@ -355,12 +415,8 @@ kubectl describe pod <pod-name>
 │   ├── order-service.yaml
 │   └── gateway-service.yaml
 │
-├── screenshots/
-│   ├── pods.png
-│   ├── logs.png
-│   └── service-test.png
 │
-└── README.md
+└── READMEK8S.md
 ```
 
 ---
@@ -396,11 +452,12 @@ kubectl logs deployment/gateway-service
 Screenshot:
 
 ```
-screenshots/logs.png
+<img width="940" height="55" alt="image" src="https://github.com/user-attachments/assets/eec4a25b-7658-471a-b2e5-ed0d4f0d8663" />
+
 ```
 
 ---
-
+                                 
 3. Service testing
 
 Command:
@@ -409,11 +466,21 @@ Command:
 kubectl port-forward service/gateway-service 3003:3003
 ```
 
+<img width="1404" height="83" alt="image" src="https://github.com/user-attachments/assets/812bbe01-f7d9-4f0e-a204-8fd279672b97" />
+
+
+
 Screenshot:
 
 ```
-screenshots/service-test.png
+<img width="940" height="169" alt="image" src="https://github.com/user-attachments/assets/3d40b483-9ec2-4e6f-bc7d-a6c16ae36cff" />
+
 ```
+<img width="940" height="169" alt="image" src="https://github.com/user-attachments/assets/49c7ff90-f167-4a86-aac7-68cd5e051790" />
+
+
+<img width="940" height="241" alt="image" src="https://github.com/user-attachments/assets/9c43c295-0fa7-4612-835c-5e6bb8f88204" />
+
 
 ---
 
@@ -452,6 +519,11 @@ but Kubernetes was trying to pull:
 ```
 uniquechanz/user-service:latest
 ```
+
+
+<img width="940" height="499" alt="image" src="https://github.com/user-attachments/assets/218cab12-bd71-4904-a775-8993fb024efe" />
+
+
 
 ### Solution
 
@@ -588,6 +660,13 @@ Correct:
 path: /health
 ```
 
+
+
+<img width="940" height="456" alt="image" src="https://github.com/user-attachments/assets/1c18639b-b5c8-4ea2-91dc-7e578b70641f" />
+
+
+
+
 ### Solution
 
 Updated probes to match the application's health endpoint:
@@ -667,12 +746,6 @@ curl http://user-service:3000
 * Deployment image names must exactly match available images.
 * Readiness and liveness probes are important for application reliability.
 * Kubernetes debugging commands like `kubectl logs` and `kubectl describe pod` help identify deployment issues quickly.
-
-
-
-
-
-
 
 
 
