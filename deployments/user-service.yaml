@@ -22,7 +22,7 @@ spec:
       containers:
       - name: user-service
         image: microservices-user-service:latest
-        imagePullPolicy: Always
+        imagePullPolicy: Never
 
         ports:
         - containerPort: 3000

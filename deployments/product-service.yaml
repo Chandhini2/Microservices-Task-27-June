@@ -22,7 +22,7 @@ spec:
       containers:
       - name: product-service
         image: microservices-product-service:latest
-        imagePullPolicy: Always
+        imagePullPolicy: Never
 
         ports:
         - containerPort: 3001

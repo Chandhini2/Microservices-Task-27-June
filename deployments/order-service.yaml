@@ -22,7 +22,7 @@ spec:
       containers:
       - name: order-service
         image: microservices-order-service:latest
-        imagePullPolicy: Always
+        imagePullPolicy: Never
 
         ports:
         - containerPort: 3002

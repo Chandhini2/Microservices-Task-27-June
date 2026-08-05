@@ -22,7 +22,7 @@ spec:
       containers:
       - name: gateway-service
         image: microservices-gateway-service:latest
-        imagePullPolicy: Always
+        imagePullPolicy: Never
 
         ports:
         - containerPort: 3003
