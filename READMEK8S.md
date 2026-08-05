@@ -418,27 +418,7 @@ kubectl describe pod <pod-name>
 
 ---
 
-# Screenshots Included
-
-The following screenshots are included as proof of deployment:
-
-1. Running Kubernetes pods
-
-Command:
-
-```bash
-kubectl get pods
-```
-
-Screenshot:
-
-```
-screenshots/pods.png
-```
-
----
-
-2. Application logs
+# Application logs
 
 Command:
 
@@ -446,16 +426,15 @@ Command:
 kubectl logs deployment/gateway-service
 ```
 
-Screenshot:
+### Screenshot: Gateway Service Logs
 
-```
-<img width="940" height="55" alt="image" src="https://github.com/user-attachments/assets/eec4a25b-7658-471a-b2e5-ed0d4f0d8663" />
+![Gateway Service Logs](https://github.com/user-attachments/assets/eec4a25b-7658-471a-b2e5-ed0d4f0d8663)
 
 ```
 
 ---
                                  
-3. Service testing
+# Service testing
 
 Command:
 
@@ -464,8 +443,6 @@ kubectl port-forward service/gateway-service 3003:3003
 ```
 
 <img width="1404" height="83" alt="image" src="https://github.com/user-attachments/assets/812bbe01-f7d9-4f0e-a204-8fd279672b97" />
-
-
 
 Screenshot:
 
@@ -477,7 +454,6 @@ Screenshot:
 
 
 <img width="940" height="241" alt="image" src="https://github.com/user-attachments/assets/9c43c295-0fa7-4612-835c-5e6bb8f88204" />
-
 
 ---
 
