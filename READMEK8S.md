@@ -85,9 +85,6 @@ minikube status
 
 <img width="940" height="256" alt="image" src="https://github.com/user-attachments/assets/e2ada74f-540b-43ea-9fcf-2b5cab8873d3" />
 
-
-
-
 Check Kubernetes node:
 
 ```bash
@@ -520,7 +517,6 @@ but Kubernetes was trying to pull:
 uniquechanz/user-service:latest
 ```
 
-
 <img width="940" height="499" alt="image" src="https://github.com/user-attachments/assets/218cab12-bd71-4904-a775-8993fb024efe" />
 
 
@@ -542,30 +538,7 @@ minikube image load <image-name>:latest
 
 ---
 
-## 2. Docker Compose Build Context Error
-
-### Issue
-
-Docker Compose failed while building services.
-
-Error:
-
-```
-unable to prepare context:
-path "./user-service" not found
-```
-
-### Root Cause
-
-The paths specified in `docker-compose.yml` did not match the actual project folder structure.
-
-### Solution
-
-Updated the `build.context` paths in `docker-compose.yml` to point to the correct service directories.
-
----
-
-## 3. Minikube Cannot Access Local Docker Images
+## 2. Minikube Cannot Access Local Docker Images
 
 ### Issue
 
@@ -604,7 +577,7 @@ minikube image ls
 
 ---
 
-## 4. Container Restart Issue (`CrashLoopBackOff`)
+## 3. Container Restart Issue (`CrashLoopBackOff`)
 
 ### Issue
 
@@ -636,7 +609,7 @@ Fixed application configuration and verified readiness/liveness probe settings.
 
 ---
 
-## 5. Readiness and Liveness Probe Failures
+## 4. Readiness and Liveness Probe Failures
 
 ### Issue
 
@@ -685,29 +658,7 @@ livenessProbe:
 
 ---
 
-## 6. Multiple Old ReplicaSets and Pods
-
-### Issue
-
-Old failed pods remained after updating deployments.
-
-### Root Cause
-
-Kubernetes maintains previous ReplicaSets during deployment updates.
-
-### Solution
-
-Removed old deployments and redeployed:
-
-```bash
-kubectl delete deployment <deployment-name>
-
-kubectl apply -f deployments/
-```
-
----
-
-## 7. Service Communication Validation
+## 6. Service Communication Validation
 
 ### Issue
 
@@ -748,7 +699,6 @@ curl http://user-service:3000
 * Kubernetes debugging commands like `kubectl logs` and `kubectl describe pod` help identify deployment issues quickly.
 
 
-
 # Cleanup
 
 Delete Kubernetes resources:
@@ -779,4 +729,7 @@ The microservices application has been successfully containerized and deployed o
 * Service communication testing
 
 ```
-```
+
+# Author
+
+Deployed and developed by Chandhini
