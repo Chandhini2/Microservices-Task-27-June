@@ -1,4 +1,4 @@
-<img width="940" height="458" alt="image" src="https://github.com/user-attachments/assets/4c02b6a1-e10c-414b-90d4-8fd2d069ffc6" /># Microservices Deployment on Kubernetes using Minikube
+# Microservices Deployment on Kubernetes using Minikube
 
 ## Project Overview
 
